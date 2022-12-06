@@ -72,7 +72,7 @@ ul,li,dl,dt,dd {list-style:none;padding:0;margin:0}
 .hd_sch_wr {display:inline-block;float:right}
 .hd_sch_bt {position:absolute;right:102px;width:48px;height: 60px;vertical-align:top;font-size:1.5em;cursor:pointer;color: #ffffff;background: #1e1e2d;border:0}
 
-#hd_sch {position:absolute;top:10px;left:210px;text-align:center;z-index: 9999}
+#hd_sch {position:absolute;top:29px;left:210px;text-align:center;z-index: 9999}
 #hd_sch h2 {position:absolute;font-size:0;text-indent:-9999em;line-height:0;overflow:hidden}
 #hd_sch form {position:relative}
 #hd_sch #sch_stx {height: 60px;padding-left: 52px;border:0px;color: #ffffff;background:#161622;border-radius:25px;font-style: normal;font-weight: 400;font-size: 18px;} 
@@ -115,7 +115,7 @@ ul,li,dl,dt,dd {list-style:none;padding:0;margin:0}
 #wrapper {min-height:100%;clear:both}
 #wrapper:after {display:block;visibility:hidden;clear:both;content:""}
 
-#container {padding:20px;max-width:1658px;margin:69px auto 0}
+#container {max-width: 1800px;position: absolute;top: 145px;right: 59px;}
 #container:after {display:block;visibility:hidden;clear:both;content:""}
 #container_title {font-size:1.6em;font-weight:bold;padding:10px;line-height:30px;color:#333;text-align:center}
 #container .conle {width:75%;float:left;padding:10px;}

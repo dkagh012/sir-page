@@ -117,6 +117,9 @@ jQuery(function($) {
 			});
             </script>
         </div>
+        <div id="tnb">
+		        	<?php echo outlogin("theme/basic"); ?>
+			    </div>
 	</div>
     
 </header>

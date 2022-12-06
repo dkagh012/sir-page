@@ -9,6 +9,11 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 add_javascript('<script src="'.G5_JS_URL.'/jquery.bxslider.js"></script>', 10);
 ?>
 
+<?php
+    echo latest('theme/main', 'free', 6, 23);        
+    ?>
+
+
 <!-- 메인 최신글 시작 -->
 <!-- <div class="conle_idx_top"> -->
 	<!-- <div class="lt" style="float:left;width:49.5%"> -->

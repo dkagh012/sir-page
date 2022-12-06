@@ -17,7 +17,7 @@ add_javascript('<script src="'.G5_JS_URL.'/jquery.bxslider.js"></script>', 10);
     // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
     // 사용방법 : latest(스킨, 게시판아이디, 출력라인, 글자수);
     // 테마의 스킨을 사용하려면 theme/basic 과 같이 지정
-    echo latest('theme/gallery', 'gallery', 4, 23);
+    echo latest('theme/gallery', 'free', 4, 23);
     ?>
     <!-- } 배너 최신글 끝 -->
 
@@ -26,7 +26,7 @@ add_javascript('<script src="'.G5_JS_URL.'/jquery.bxslider.js"></script>', 10);
     // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
     // 사용방법 : latest(스킨, 게시판아이디, 출력라인, 글자수);
     // 테마의 스킨을 사용하려면 theme/basic 과 같이 지정
-    echo latest('theme/notice', 'notice', 4, 23);
+    // echo latest('theme/notice', 'free', 4, 23);
     ?>
     <!-- } 공지사항 최신글 끝 -->
     

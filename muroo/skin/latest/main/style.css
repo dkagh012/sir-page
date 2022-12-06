@@ -25,8 +25,12 @@
 
 .gall .bx-controls-direction {width:100%;position:absolute;top:45%}
 .gall .bx-controls-direction i {font-size:2em;color:#fff}
-.gall .bx-next {position:absolute;right:0;display:inline-block;padding:10px;background:#7e8088;opacity:0.8;border-radius:3px 0 0 3px}
-.gall .bx-prev {position:absolute;left:0;display:inline-block;padding:10px;background:#7e8088;opacity:0.8;border-radius:0 3px 3px 0}
+.gall .bx-next {position:absolute;right: 24px;bottom: -24px;padding: 0px;display:inline-block;opacity:0.8;}
+.gall .bx-prev {position:absolute;left: 22px;bottom: -24px;display:inline-block;opacity:0.8;}
+
+
+#angle-right{font-size:19px;}
+#angle-left{font-size:19px;}
 
 @media (max-width:720px){
 	.lt {width:100% !important}

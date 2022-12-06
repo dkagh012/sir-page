@@ -4,8 +4,8 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 0);
-$thumb_width = 900;
-$thumb_height = 370;
+$thumb_width = 1476;
+$thumb_height = 440;
 ?>
 
 <div class="gall">
@@ -61,8 +61,8 @@ $('.gall ul').each(function(){
     $(this).bxSlider({
         hideControlOnEnd: true,
         pager:false,
-        nextText: '<i class="fa fa-angle-right" aria-hidden="true"></i>',
-        prevText: '<i class="fa fa-angle-left" aria-hidden="true"></i>'
+        nextText: '<span id="angle-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>',
+        prevText: '<span id="angle-left"><i class="fa fa-angle-left" aria-hidden="true"></i></span>'
     });
 });
 </script>

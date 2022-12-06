@@ -65,7 +65,7 @@ ul,li,dl,dt,dd {list-style:none;padding:0;margin:0}
 #hd_sch {position:absolute;top:10px;left:210px;text-align:center;z-index: 9999}
 #hd_sch h2 {position:absolute;font-size:0;text-indent:-9999em;line-height:0;overflow:hidden}
 #hd_sch form {position:relative}
-#hd_sch #sch_stx {height:60px;padding-left:10px;border:0px;background:#161622; border-radius:25px;} 
+#hd_sch #sch_stx {height: 60px;padding-left: 52px;border:0px;color: #ffffff;background:#161622;border-radius:25px;font-style: normal;font-weight: 400;font-size: 18px;} 
 #hd_sch #sch_submit {position:absolute;top:0;right:0;width: 48px;height: 60px;border:0;cursor:pointer;color:#684ecc;background:transparent;font-size:1.6em;line-height: 20px;}
 .sch_more_close {position:absolute;right:-48px;top:0;width:40px;height:37px;border:0;cursor:pointer;color:#dedede;background:#fff;font-size:1.8em;text-align:center;vertical-align:top}
 
@@ -187,7 +187,7 @@ box-shadow:0 2px 5px rgba(0,0,0,0.1)}
   #sidedrawer {transform:translate(300px)}
   #content-wrapper {margin-left:300px}
   #header {margin-left:300px}
-  #hd_sch #sch_stx {width:800px}
+  #hd_sch #sch_stx {width: 1200px;}
   body.hide-sidedrawer #header {margin-left:0}
   body.hide-sidedrawer #sidedrawer {transform:translate(0px)}
   body.hide-sidedrawer #content-wrapper {margin-left:0}

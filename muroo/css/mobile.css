@@ -58,6 +58,16 @@ ul,li,dl,dt,dd {list-style:none;padding:0;margin:0}
 }
 #logo a {display:inline-block}
 
+
+#sch_stx::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 27px;
+	color: #FFFFFF;;
+  opacity: 1;
+}
+
 .header_ct {float:right}
 .hd_sch_wr {display:inline-block;float:right}
 .hd_sch_bt {position:absolute;right:102px;width:48px;height: 60px;vertical-align:top;font-size:1.5em;cursor:pointer;color: #ffffff;background: #1e1e2d;border:0}
@@ -66,7 +76,7 @@ ul,li,dl,dt,dd {list-style:none;padding:0;margin:0}
 #hd_sch h2 {position:absolute;font-size:0;text-indent:-9999em;line-height:0;overflow:hidden}
 #hd_sch form {position:relative}
 #hd_sch #sch_stx {height: 60px;padding-left: 52px;border:0px;color: #ffffff;background:#161622;border-radius:25px;font-style: normal;font-weight: 400;font-size: 18px;} 
-#hd_sch #sch_submit {position:absolute;top:0;right:0;width: 48px;height: 60px;border:0;cursor:pointer;color:#684ecc;background:transparent;font-size:1.6em;line-height: 20px;}
+#hd_sch #sch_submit {position:absolute;top:0;left: 18px;width: 21px;height: 60px;border:0;cursor:pointer;color: #ffffff;background:transparent;font-size: 1.8em;line-height: 20px;}
 .sch_more_close {position:absolute;right:-48px;top:0;width:40px;height:37px;border:0;cursor:pointer;color:#dedede;background:#fff;font-size:1.8em;text-align:center;vertical-align:top}
 
 #tnb {position:relative;display:inline-block;float:right}

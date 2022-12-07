@@ -129,7 +129,8 @@ jQuery(function($) {
         
 
 <div id="logo">
-        <div>R O G O</div>
+
+        <a href ="http://dkagh012.dothome.co.kr" class="logo_a">R O G O</a>
 </div>
 
     <div id="gnb">

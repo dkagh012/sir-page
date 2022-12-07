@@ -13,7 +13,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 ?>
 
 <div class="mainImages mainImages_<?php echo $board['bo_table']?>">
-    <ul>
+    <ul class="gall_lt">
     <?php
     for ($i=0; $i<$list_count; $i++) {
     $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
@@ -27,9 +27,8 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" >';
     ?>
         <li>
-            <i class="lt_img"><?php echo $img_content; ?></i>
-
-
+            <a href="<?php echo $list[$i]['href'] ?>" class="lt_img"><?php echo $img_content; ?></a>
+            <div>테스트용어</div>
         </li>
     <?php }  ?>
     </ul>

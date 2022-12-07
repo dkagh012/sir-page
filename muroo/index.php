@@ -14,7 +14,7 @@ add_javascript('<script src="'.G5_JS_URL.'/jquery.bxslider.js"></script>', 10);
     ?>
 
 <?php
-    echo latest('theme/main', 'free', 6, 23);        
+    // echo latest('theme/main', 'free', 6, 23);        
     ?>
 
 

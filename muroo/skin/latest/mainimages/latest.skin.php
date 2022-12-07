@@ -5,8 +5,8 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 // add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 0);
-add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/jquery.bxslider.css">', 0);
-add_javascript('<script src="'.G5_JS_URL.'/jquery.bxslider.js"></script>', 10);
+add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/main.jquery.bxslider.css">', 0);
+
 $thumb_width = 1476;
 $thumb_height = 440;
 $list_count = (is_array($list) && $list) ? count($list) : 0;
@@ -28,7 +28,6 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     ?>
         <li>
             <a href="<?php echo $list[$i]['href'] ?>" class="lt_img"><?php echo $img_content; ?></a>
-            <div>테스트용어</div>
         </li>
     <?php }  ?>
     </ul>

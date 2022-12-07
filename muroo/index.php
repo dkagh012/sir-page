@@ -9,9 +9,14 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 add_javascript('<script src="'.G5_JS_URL.'/jquery.bxslider.js"></script>', 10);
 ?>
 
-<?php
+	<?php
     echo latest('theme/mainimages', 'free', 6, 23);        
     ?>
+
+<?php
+    echo latest('theme/main', 'free', 6, 23);        
+    ?>
+
 
 
 <!-- 메인 최신글 시작 -->

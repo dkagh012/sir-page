@@ -4,7 +4,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
-add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 0);
+// add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 0);
 add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/jquery.bxslider.css">', 0);
 add_javascript('<script src="'.G5_JS_URL.'/jquery.bxslider.js"></script>', 10);
 $thumb_width = 1476;
@@ -13,7 +13,6 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 ?>
 
 <div class="mainImages mainImages_<?php echo $board['bo_table']?>">
-    <h2 class="sound_only"><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>"><?php echo $bo_subject ?></a></h2>
     <ul>
     <?php
     for ($i=0; $i<$list_count; $i++) {
@@ -29,24 +28,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     ?>
         <li>
             <i class="lt_img"><?php echo $img_content; ?></i>
-            <?php
 
- 
-            if($list[$i]['wr_link1']){ 
-				echo "<a href=\"".$list[$i]['wr_link1']."\"> ";
-			} else {
-				echo '<a>';
-			}
-            if($list[$i]['subject'] == '제목없음') { 
-				echo '<!-- 제목없음 -->'; 
-			} else {
-				echo "<b>";
-				echo $list[$i]['subject']; 
-				echo "</b>";
-			}
-            echo "</a>";
-
-            ?>
 
         </li>
     <?php }  ?>

@@ -3,11 +3,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
 $thumb_width = 930;
-$thumb_height = 300;
+$thumb_height = 120;
 $list_count = (is_array($list) && $list) ? count($list) : 0;
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-<div id="splide3" class="splide">
+<div id="splide" class="splide">
 	<div class="splide__track">
 		<ul class="splide__list">
     <?php
@@ -32,17 +32,14 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     <?php }  ?>
     </ul>
   </div>
+  <div class="splide__progress">
+		<div class="splide__progress__bar">
+		</div>
+	</div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 <script>
 	document.addEventListener( 'DOMContentLoaded', function () {
-	//	new Splide( '#splide' ).mount();
-    new Splide( '#splide3', {
-			'type'   	: 'loop',
-			'direction' : 'ttb',
-			'height'   : '10rem',
-			'autoplay' : true,
-    } ).mount();
+		new Splide( '.splide' ).mount();
 	} );
-
 </script>

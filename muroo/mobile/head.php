@@ -12,39 +12,7 @@ include_once(G5_LIB_PATH.'/connect.lib.php');
 include_once(G5_LIB_PATH.'/popular.lib.php');
 
 ?>
-<script>
-jQuery(function($) {
-	var $bodyEl = $('body'),
-		$sidedrawerEl = $('#sidedrawer');
-	
-	function showSidedrawer() {
-		// show overlay
-		var options = {
-  		onclose: function() {
-			$sidedrawerEl
-      		.removeClass('active')
-      		.appendTo(document.body);
-		}
-		};
-    
-		var $overlayEl = $(mui.overlay('on', options));
-    
-    	// show element
-    	$sidedrawerEl.appendTo($overlayEl);
-		setTimeout(function() {
-  			$sidedrawerEl.addClass('active');
-		}, 20);
-  	}
 
-	function hideSidedrawer() {
-		$bodyEl.toggleClass('hide-sidedrawer');
-	}
-
-	$('.js-show-sidedrawer').on('click', showSidedrawer);
-	$('.js-hide-sidedrawer').on('click', hideSidedrawer);
-
-});
-</script>
 
 <!-- 상단 시작 { -->
 <header id="header">
@@ -151,19 +119,19 @@ jQuery(function($) {
             ?>
 
                 <?php if($row['me_name']=="자유게시판") {?>
-                    <li class="gnb_1dli <?php echo $_GET["bo_table"]=="free" ? "active":"gnb_1dli_on gnb_1dli_over2";?>">
+                    <li class="gnb_1dli <?php echo $_GET["bo_table"]=="free" ? "active":"gnb_1dli_on gnb_1dli_over2 ";?>">
                 
                     <?php }else if($row['me_name']=="갤러리"){?>
-                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="gallery" ? "active":"gnb_1dli_on gnb_1dli_over2";?>">
+                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="gallery" ? "active":"gnb_1dli_on gnb_1dli_over2 ";?>">
                 
                         <?php }else if($row['me_name']=="공지사항"){?>
-                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="notice" ? "active":"gnb_1dli_on gnb_1dli_over2";?>">
+                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="notice" ? "active":"gnb_1dli_on gnb_1dli_over2 ";?>">
                 
                         <?php }else if($row['me_name']=="질문답변"){?>
-                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="qa" ? "active":"gnb_1dli_on gnb_1dli_over2";?>">
+                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="qa" ? "active":"gnb_1dli_on gnb_1dli_over2 ";?>">
                 
                         <?php }else if($row['me_name']=="홈"){?>
-                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="" ? "active":"gnb_1dli_on gnb_1dli_over2";?>"> 
+                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="" ? "active":"gnb_1dli_on gnb_1dli_over2 ";?>"> 
                 
                         <!-- ==> 홈위치 확인필요 -->
                 
@@ -202,54 +170,8 @@ jQuery(function($) {
 		</div>
 	</div>
 </aside>            
-            
-<script>
-$(function () {
-    //폰트 크기 조정 위치 지정
-    var font_resize_class = get_cookie("ck_font_resize_add_class");
-    if( font_resize_class == 'ts_up' ){
-        $("#text_size button").removeClass("select");
-        $("#size_def").addClass("select");
-    } else if (font_resize_class == 'ts_up2') {
-        $("#text_size button").removeClass("select");
-        $("#size_up").addClass("select");
-    }
 
-    $(".hd_opener").on("click", function() {
-        var $this = $(this);
-        var $hd_layer = $this.next(".hd_div");
 
-        if($hd_layer.is(":visible")) {
-            $hd_layer.hide();
-            $this.find("span").text("열기");
-        } else {
-            var $hd_layer2 = $(".hd_div:visible");
-            $hd_layer2.prev(".hd_opener").find("span").text("열기");
-            $hd_layer2.hide();
-
-            $hd_layer.show();
-            $this.find("span").text("닫기");
-        }
-    });
-
-    $("#container").on("click", function() {
-        $(".hd_div").hide();
-
-    });
-
-    $(".btn_gnb_op").click(function(){
-        $(this).toggleClass("btn_gnb_cl").next(".gnb_2dul").slideToggle(300);
-        
-    });
-
-    $(".hd_closer").on("click", function() {
-        var idx = $(".hd_closer").index($(this));
-        $(".hd_div:visible").hide();
-        $(".hd_opener:eq("+idx+")").find("span").text("열기");
-    });
-
-});
-</script>
 
 <!-- 컨텐츠 시작 { -->
 <div id="content-wrapper">

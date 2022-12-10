@@ -12,7 +12,6 @@ include_once(G5_LIB_PATH.'/connect.lib.php');
 include_once(G5_LIB_PATH.'/popular.lib.php');
 
 ?>
-
 <script>
 jQuery(function($) {
 	var $bodyEl = $('body'),
@@ -143,9 +142,32 @@ jQuery(function($) {
 			foreach( $menu_datas as $row ){
 				if( empty($row) ) continue;
             ?>
-                <li class="gnb_1dli">
-                    <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" class="gnb_1da"><?php echo $row['me_name'] ?></a>
-                    <?php
+
+                <?php if($row['me_name']=="자유게시판") {?>
+                    <li class="gnb_1dli <?php echo $_GET["bo_table"]=="free" ? "active":"gnb_1dli_on gnb_1dli_over2";?>">
+                
+                    <?php }else if($row['me_name']=="갤러리"){?>
+                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="gallery" ? "active":"gnb_1dli_on gnb_1dli_over2";?>">
+                
+                        <?php }else if($row['me_name']=="공지사항"){?>
+                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="notice" ? "active":"gnb_1dli_on gnb_1dli_over2";?>">
+                
+                        <?php }else if($row['me_name']=="질문답변"){?>
+                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="qa" ? "active":"gnb_1dli_on gnb_1dli_over2";?>">
+                
+                        <?php }else if($row['me_name']=="홈"){?>
+                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="" ? "active":"gnb_1dli_on gnb_1dli_over2";?>"> 
+                
+                        <!-- ==> 홈위치 확인필요 -->
+                
+                        <?php }?>
+                
+                        <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" class="gnb_1da"><?php echo $row['me_name'] ?></a>
+                        <a class=""></a>
+                    
+                        
+                
+                <?php
                     $k = 0;
                     foreach( (array) $row['sub'] as $row2 ){
 						if( empty($row2) ) continue;
@@ -218,6 +240,7 @@ $(function () {
         $(".hd_div:visible").hide();
         $(".hd_opener:eq("+idx+")").find("span").text("열기");
     });
+
 });
 </script>
 

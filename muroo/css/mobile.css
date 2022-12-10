@@ -98,9 +98,23 @@ ul,li,dl,dt,dd {list-style:none;padding:0;margin:0}
 #gnb .gnb_1dli {width:100%;position:relative;padding:0}
 #gnb .gnb_1dli button {position:absolute;top:5px;right:5px;width:30px;height:40px;overflow:hidden;border:0;background:url('../img/mobile/gnb_bg2.png') no-repeat center;text-indent:-9999px}
 #gnb .gnb_1dli button.btn_gnb_cl {background:url('../img/mobile/gnb_bg.png') no-repeat center}
-#gnb .gnb_1da {display:block;text-align: left;color: #6F7181;line-height: 56px;padding-left: 50px;font-family: 'Noto Sans CJK KR';font-style: normal;font-weight: 500;font-size: 22px;}
+#gnb .gnb_1da {display:block;text-align: left;line-height: 56px;font-family: 'Noto Sans CJK KR';
+  color: #6F7181;  padding-left: 50px;font-style: normal;font-weight: 500;font-size: 22px;
+}
+
 #gnb .gnb_1da:hover {background:#1E1E2D;border-left: 4px solid #26E2B3; color:#fff;font-weight: 700;
 font-size: 22px;}
+
+#gnb .active{background:#1E1E2D;border-left: 4px solid #26E2B3; color:#fff;font-weight: 700;
+  font-size: 22px;
+
+}
+
+
+#gnb .active:hover {background:#1E1E2D;border-left: 0px solid #1E1E2D; color:#fff;font-weight: 700;
+font-size: 22px;}
+
+
 
 #gnb .gnb_2dul {display:none;background:#1d223d;padding:10px 0}
 #gnb .gnb_2da {position:relative;color:#8c8f99;font-size:1em;line-height:40px;padding:0 20px;padding-left:40px}
@@ -566,3 +580,4 @@ box-shadow:2px 2px 3px 0px rgba(0,0,0,0.2)}
 	.sch_more_close {border:1px solid #c5cbd5;right:10px;top:-53px;color:#d9dfe9}
 	#container {padding:0}
 }
+

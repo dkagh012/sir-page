@@ -29,7 +29,7 @@ li#ol_arm{border-left:0;}
 #ol_arm #arm_cnt.arm1 {font-weight:bold}
 #ol_arm #arm_cnt.arm0{position: relative;display:inline-block;line-height:13px;margin-left:-5px;padding:0 5px;border-radius:10px;font-size:10px;right:0;top:-5px;background: #f04e00;color: #fff;}
  
-#ol_arm dl {display:none;z-index:100;position:absolute;top:30px;left:0;margin:0;padding:0;width:198px;border:1px solid #818f98;background:#fff;list-style:none;line-height:1.2em}
+#ol_arm dl {display:none;z-index:100;position:absolute;top:40px;right:40px;margin:0;padding:0;width:198px;border:1px solid #818f98;background:#fff;list-style:none;line-height:1.2em}
 #ol_arm dd {position:relative;margin:0;border:0;border-bottom:1px solid #d4dbe0;background:#fff;}
 #ol_arm dd a.redirect_link {display:block;padding:5px 20px 5px 5px;background:#fff;color:#69797c;letter-spacing:-0.1em; height:50px; line-height:14px}
 #ol_arm dd a.redirect_link:focus, #hd #hd_wrapper #tnb #ol_arm dd a:hover {background:#d9e1e5;color:#000}

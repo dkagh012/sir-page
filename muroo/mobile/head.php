@@ -118,7 +118,14 @@ jQuery(function($) {
         </div>
         <div id="tnb">
 		        	<?php echo outlogin("theme/basic"); ?>
-			    </div>
+			    
+                    </div>
+        <div id="tnb-arm">         
+        <?php if ($is_member) {  ?>
+            <?php include_once(G5_PATH.'/plugin/srd-pushmsg/pushmsg_view.php'); ?>
+        <?php }  ?>
+        </div>   
+        
 	</div>
     
 </header>

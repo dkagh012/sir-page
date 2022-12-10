@@ -85,7 +85,8 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
             <?php echo popular('theme/basic'); // 인기검색어, 테마의 스킨을 사용하려면 스킨을 theme/basic 과 같이 지정  ?>
         </div>
         <ul class="hd_login">        
-            <?php if ($is_member) {  ?>
+        <?php if ($is_member) {  ?>
+            <?php include_once(G5_PATH.'/plugin/srd-pushmsg/pushmsg_view.php'); ?>
             <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php">정보수정</a></li>
             <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
             <?php if ($is_admin) {  ?>

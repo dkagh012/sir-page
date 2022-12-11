@@ -141,15 +141,13 @@ font-size: 22px;}
 #wrapper {min-height:100%;clear:both}
 #wrapper:after {display:block;visibility:hidden;clear:both;content:""}
 
-#container {max-width: 1680px;position: absolute; top: 109px;left: 230px;height:650px;}
+#container {width:100%;position: absolute; top: 109px;left: 230px;height:650px;}
 #container:after {display:block;visibility:hidden;clear:both;content:""}
 #container_title {font-size:1.6em;font-weight:bold;padding:10px;line-height:30px;color:#333;text-align:center}
 #container .conle {
   float: left;
-  width: 100%;
-	
-height:100%;
-
+  width: 88%;
+  height:100%;
   }
 #container .conri {width:24%;float:left;margin-left:1%}
 

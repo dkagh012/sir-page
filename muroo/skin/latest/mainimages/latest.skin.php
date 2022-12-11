@@ -43,5 +43,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 		auto: true,
         pager:true,
     });
+
+    
 </script>
 <?php } ?>

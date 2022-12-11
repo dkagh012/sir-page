@@ -12,9 +12,12 @@ add_javascript('<script src="'.G5_JS_URL.'/jquery.bxslider.js"></script>', 10);
 	<?php
     echo latest('theme/mainimages', 'free', 5, 23);        
     ?>
-
-<!--  -->
-
+<?php 
+echo latest('theme/slide_thumb', 'free', 10, 99); 
+?>
+<?php
+    // echo latest('theme/okbest', 'free', 12, 23);
+    ?>
 
 
 <!-- 메인 최신글 시작 -->

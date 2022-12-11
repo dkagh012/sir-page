@@ -32,7 +32,7 @@ ul,li,dl,dt,dd {list-style:none;padding:0;margin:0}
 .hd_pops_footer button {margin-right:5px;padding:5px 10px;border:0;background:#393939;color:#fff}
 
 /* 상단 레이아웃 */
-#header {position:fixed;top:0;right:0;left:0;background: #161622;height:110px;width:100%;}
+#header {position:fixed;top:0;right:0;left:0;z-index:9999999;transition:left 0.2s}
 #header:after {display:block;visibility:hidden;clear:both;content:""}
 #hd_h1 {position:absolute;font-size:0;text-indent:-9999em;line-height:0;overflow:hidden}
 
@@ -40,7 +40,10 @@ ul,li,dl,dt,dd {list-style:none;padding:0;margin:0}
 .to_content a {z-index:100000;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0;overflow:hidden}
 #mobile-indicator {display:none}
 
-#hd_wrapper {position:relative;margin:0 auto;}
+#hd_wrapper {
+    height: 110px;
+    background: #161622;
+}
 #hd_wrapper:after {display:block;visibility:hidden;clear:both;content:""}
 #hd_wrapper .gnb_side_btn {float:left;display:inline-block}
 #hd_wrapper .gnb_side_btn a {display:inline-block;width:48px;height:48px;line-height:48px;text-align:center;font-size:2em;vertical-align:top;cursor:pointer;color:#9da5b4;border:0}
@@ -75,7 +78,7 @@ ul,li,dl,dt,dd {list-style:none;padding:0;margin:0}
 #hd_sch {position:absolute;;left:250px ;text-align:center;z-index: 9999}
 #hd_sch h2 {position:absolute;font-size:0;text-indent:-9999em;line-height:0;overflow:hidden}
 #hd_sch form {position:relative}
-#hd_sch #sch_stx {width: 1440px;height: 110px;padding-left: 73px;border:0px;color: #ffffff;background:#161622;font-style: normal;font-weight: 400;font-size: 18px;} 
+#hd_sch #sch_stx {width: 1300px;height: 110px;padding-left: 73px;border:0px;color: #ffffff;background:#161622;font-style: normal;font-weight: 400;font-size: 18px;} 
 #hd_sch #sch_submit {position:absolute;top: 26px;left: 36px;width: 21px;height: 60px;border:0;cursor:pointer;color: #6F7181;background:transparent;font-size: 1.8em;line-height: 20px;}
 .sch_more_close {position:absolute;right:-48px;top:0;width:40px;height:37px;border:0;cursor:pointer;color:#dedede;background:#fff;font-size:1.8em;text-align:center;vertical-align:top}
 
@@ -100,7 +103,7 @@ ul,li,dl,dt,dd {list-style:none;padding:0;margin:0}
 #tnb .tnb_member {display:none;position:absolute;top:58px;right:0;border-radius:3px;width:150px;background:#fff;z-index:999;box-shadow:0px 1px 5px 1px #e4e4e4}
 
 /* 사이드 왼쪽 메뉴 */
-#sidedrawer {position:fixed;top:0px;bottom:0;width: 250px;background: #161622;overflow:auto;border-right: 1px solid #4E4E4E;}
+#sidedrawer {position:fixed;top:0px;bottom:0;width: 250px;background: #161622;overflow:auto;z-index:99999999999;transition:transform 0.2s}
 #sidedrawer:after {display:block;visibility:hidden;clear:both;content:""}
 
 #gnb h2 {position:absolute;font-size:0;text-indent:-9999em;line-height:0;overflow:hidden}
@@ -115,7 +118,7 @@ ul,li,dl,dt,dd {list-style:none;padding:0;margin:0}
 #gnb .gnb_1da:hover {background:#1E1E2D;border-left: 4px solid #26E2B3; color:#fff;font-weight: 700;
 font-size: 22px;}
 
-#gnb .active{background:#1E1E2D;border-left: 4px solid #26E2B3; color:#fff ;font-weight: 700;
+#gnb .active{background:#1E1E2D;border-left: 4px solid #26E2B3; color:#fff;font-weight: 700;
   font-size: 22px;
 
 }
@@ -145,11 +148,14 @@ font-size: 22px;}
 #container:after {display:block;visibility:hidden;clear:both;content:""}
 #container_title {font-size:1.6em;font-weight:bold;padding:10px;line-height:30px;color:#333;text-align:center}
 #container .conle {
-  float: left;
-  width: 88%;
+
+
+  width: 86%;
   height:100%;
   }
 #container .conri {width:24%;float:left;margin-left:1%}
+
+
 
 .conle_idx_top {}
 .conle_idx_top:after {display:block;visibility:hidden;clear:both;content:""}
@@ -208,6 +214,8 @@ box-shadow:0 2px 5px rgba(0,0,0,0.1)}
 #content-wrapper {
   min-height: 100%;
   overflow-x: hidden;
+  margin-left: 0px;
+  transition: margin-left 0.2s;
   background:#1e1e2d;
   /* sticky bottom */
   box-sizing: border-box;
@@ -576,4 +584,3 @@ box-shadow:2px 2px 3px 0px rgba(0,0,0,0.2)}
 	.sch_more_close {border:1px solid #c5cbd5;right:10px;top:-53px;color:#d9dfe9}
 	#container {padding:0}
 }
-

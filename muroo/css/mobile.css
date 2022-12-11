@@ -141,7 +141,7 @@ font-size: 22px;}
 #wrapper {min-height:100%;clear:both}
 #wrapper:after {display:block;visibility:hidden;clear:both;content:""}
 
-#container {width:100%;position: absolute; top: 109px;left: 230px;height:650px;}
+#container {width:100%;position: absolute; top: 109px;left: 250px;height:650px;}
 #container:after {display:block;visibility:hidden;clear:both;content:""}
 #container_title {font-size:1.6em;font-weight:bold;padding:10px;line-height:30px;color:#333;text-align:center}
 #container .conle {

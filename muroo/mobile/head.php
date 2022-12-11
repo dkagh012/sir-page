@@ -18,13 +18,14 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 <header id="header">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
 
-    <div class="to_content"><a href="#container">본문 바로가기</a></div>
-    <div id="mobile-indicator"></div>
+    <!-- <div class="to_content"><a href="#container">본문 바로가기</a></div> -->
+    <!-- <div id="mobile-indicator"></div> -->
     
     <?php
     if(defined('_INDEX_')) { // index에서만 실행
         include G5_MOBILE_PATH.'/newwin.inc.php'; // 팝업레이어
     } ?>
+
 
 	<div id="hd_wrapper" class="">
       	<div class="gnb_side_btn">
@@ -84,21 +85,25 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 			});
             </script>
         </div>
-        <div id="tnb">
-		        	<?php echo outlogin("theme/basic"); ?>
-			    
-                    </div>
-        <div id="tnb-arm">         
-        <?php if ($is_member) {  ?>
-            <?php include_once(G5_PATH.'/plugin/srd-pushmsg/pushmsg_view.php'); ?>
-        <?php }  ?>
-        </div>   
+        
+        <!-- 오른쪽 배너  -->
+            <div id="tnb">
+                <?php echo outlogin("theme/basic"); ?>			    
+            </div>
+            <!-- 왼쪽 알람 -->
+            <div id="tnb-arm">         
+                <?php if ($is_member) {  ?>
+                    <?php include_once(G5_PATH.'/plugin/srd-pushmsg/pushmsg_view.php'); ?>
+                <?php }  ?>
+            </div>   
         
 	</div>
     
 </header>
 <!-- } 상단 끝 -->
         
+
+
 <aside id="sidedrawer">
         
 

@@ -28,7 +28,23 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     ?>
         <li>
             <a href="<?php echo $list[$i]['href'] ?>" class="lt_img"><?php echo $img_content; ?></a>
+        <div class="lt_name">
+        <?php
+        
+            echo "<p href=\"".$list[$i]['href']."\">";
+            if ($list[$i]['is_notice'])
+                echo "<strong>".$list[$i]['subject']."</strong>";
+            else
+                echo $list[$i]['subject'];
+
+            // if ($list[$i]['comment_cnt'])
+            //     echo $list[$i]['comment_cnt'];
+
+            echo "</p>";
+            ?>
+          <div>  
         </li>
+
     <?php }  ?>
     </ul>
     <?php if (count($list) == 0) { //게시물이 없을 때  ?>

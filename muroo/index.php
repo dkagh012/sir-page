@@ -13,7 +13,7 @@ add_javascript('<script src="'.G5_JS_URL.'/jquery.bxslider.js"></script>', 10);
     echo latest('theme/mainimages', 'free', 5, 23);        
     ?>
 <?php 
-echo latest('theme/slide_thumb', 'free', 10, 99); 
+echo latest('theme/slide_thumb', 'ani', 10, 99); 
 ?>
 <?php
     // echo latest('theme/okbest', 'free', 12, 23);

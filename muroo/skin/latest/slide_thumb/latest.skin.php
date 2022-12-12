@@ -4,8 +4,8 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/css/style.css">', 0);
-$thumb_width = 600;
-$thumb_height = 300;
+$thumb_width = 470;
+$thumb_height = 500;
 $list_count = (is_array($list) && $list) ? count($list) : 0;
 
 //본문 추출시 아래코드 적절한 위치에 추가
@@ -21,7 +21,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/css/swiper.css">
 <!-- } -->
 
-<div class="swiper-container swiper-container-slide" style="padding-bottom:50px;">
+<div class="swiper-container swiper-container-slide" style="padding-bottom:50px;padding-left:120px;padding-right:70px;">
     <div class="swiper-wrapper">
 
         <?php
@@ -43,28 +43,36 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         ?>
 
         <div class="swiper-slide swiper-slide-slide">
-            
             <a href="<?php echo $wr_href; ?>"><?php echo run_replace('thumb_image_tag', $img_content, $thumb); ?></a>
-            
             <?php if ($list[$i]['icon_new']) { ?>
-                <div class="slide_list_new">New</div>
+                <div class="slide_list_img_background"></div>
             <?php } ?>
+            
             <div class="slide_gap">
                 <ul>
-                    <li class="slide_title cut"><a href="<?php echo $wr_href; ?>"><?php echo $list[$i]['subject'] ?></a></li>
+                <li class="slide_title cut">
+                    <p>[<?php 
+                        if($list[$i]['ca_name']) {
+                            echo $list[$i]['ca_name'];
+                        }
+                    ?>]
+                    <?php echo $list[$i]['subject'] ?>
+                </p>
+                    <!-- <p href="<?php echo $wr_href; ?>"></p> -->
+                </li>
+                    
                     <li class="slide_date">
+          
                         <?php 
-                            if($list[$i]['ca_name']) {
-                                echo $list[$i]['ca_name']."　";
-                            }
-                            ?>
-                        <?php echo $list[$i]['datetime'] ?>　
+                        // echo $list[$i]['datetime'] 
+                        ?>　
                         <?php
                             if ($list[$i]['comment_cnt']) {
-					           echo "<span class='slide_comm'>+".$list[$i]['comment_cnt']."</span>";
+					        //    echo "<span class='slide_comm'>+".$list[$i]['comment_cnt']."</span>";
                             }
                         ?>
                     </li>
+                    
                 </ul>
             </div>
         </div>
@@ -81,7 +89,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     var swiper = new Swiper('.swiper-container-slide', {
         slidesPerColumnFill: 'row',
         slidesPerView: 3, // 가로갯수
-        slidesPerColumn: 2, // 세로갯수
+        slidesPerColumn: 10, // 세로갯수
         spaceBetween: 35, // 간격
         touchRatio: 1, // 드래그 가능여부(1, 0)
 
@@ -97,52 +105,18 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         breakpoints: { // 반응형 처리
             1440: {
                 slidesPerColumnFill: 'row',
-                slidesPerView: 2,
-                slidesPerColumn: 2,
+                slidesPerView: 3,
+                slidesPerColumn: 10,
                 spaceBetween: 35
             },
-            1920: {
+
+            3580: {
                 slidesPerColumnFill: 'row',
                 slidesPerView: 3,
-                slidesPerColumn: 2,
+                slidesPerColumn: 10,
                 spaceBetween: 35
             },
-            2150: {
-                slidesPerColumnFill: 'row',
-                slidesPerView: 4,
-                slidesPerColumn: 2,
-                spaceBetween: 35
-            },
-            2600: {
-                slidesPerColumnFill: 'row',
-                slidesPerView: 5,
-                slidesPerColumn: 2,
-                spaceBetween: 35
-            },
-            1280: {
-                slidesPerColumnFill: 'row',
-                slidesPerView: 3,
-                slidesPerColumn: 2,
-                spaceBetween: 35
-            },
-            1024: {
-                slidesPerColumnFill: 'row',
-                slidesPerView: 3,
-                slidesPerColumn: 2,
-                spaceBetween: 35
-            },
-            768: {
-                slidesPerColumnFill: 'row',
-                slidesPerView: 2,
-                slidesPerColumn: 2,
-                spaceBetween: 35
-            },
-            480: {
-                slidesPerColumnFill: 'row',
-                slidesPerView: 2,
-                slidesPerColumn: 2,
-                spaceBetween: 35
-            },
+  
 
         }
 

@@ -38,23 +38,32 @@
 
 /* 추가 by.False9 { */
 
-.slide_title {color:#000; font-weight: 900; font-size: 16px; letter-spacing: -0.5px;}
+.slide_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 29px;
+    color: #26E2B3;
+    position: absolute;
+    bottom: 28%;
+    left: 5.2%;
+}
 .slide_date {color:#999; font-size: 11px; padding-top:5px;}
 .slide_comm {color:#000; font-weight: 900;}
 
 
-.slide_list_new {
+.slide_list_img_background {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #212121;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    text-align: center;
+    top: 0;
+    right: 0;
+    border-radius: 30px;
+    height: 96%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14.58%, rgba(0, 0, 0, 0.7) 80.73%);
+    width: 100%;
+    text-align: left;
     color: #999;
-    font-size: 11px;
-    padding-top: 12px;
+    font-size: 14px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     font-weight: bold;
 }
@@ -73,7 +82,7 @@
 
 .swiper-slide-slide img {
     width: 100%;
-    
+    border-radius: 30px;
 }
 
 .cut {

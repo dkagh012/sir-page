@@ -123,20 +123,21 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 				if( empty($row) ) continue;
             ?>
 
-                <?php if($row['me_name']=="자유게시판") {?>
+                <?php if($row['me_name']=="게시판") {?>
                     <li class="gnb_1dli <?php echo $_GET["bo_table"]=="free" ? "active free":"free";?>">
                 
-                    <?php }else if($row['me_name']=="갤러리"){?>
-                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="gallery" ? "active gallery":"gallery";?>">
-                
-                        <?php }else if($row['me_name']=="공지사항"){?>
+                    <?php }else if($row['me_name']=="소식"){?>
                         <li class="gnb_1dli <?php echo $_GET["bo_table"]=="notice" ? "active notice":"notice";?>">
-                
-                        <?php }else if($row['me_name']=="질문답변"){?>
-                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="qa" ? "active qa":"qa";?>">
                 
                         <?php }else if($row['me_name']=="홈"){?>
                         <li class="gnb_1dli <?php echo $_GET["bo_table"]=="" ? "active home":"home";?>"> 
+                
+                        <?php }else if($row['me_name']=="애니잇"){?>
+                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="ani" ? "active home":"home";?>"> 
+                
+                        <?php }else if($row['me_name']=="게임" ){?>
+                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="ani" and $sca == '게임' ? "active home":"home";?>"> 
+
                 
                         <!-- ==> 홈위치 확인필요 -->
                 

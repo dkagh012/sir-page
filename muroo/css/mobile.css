@@ -144,7 +144,10 @@ font-size: 22px;}
 #wrapper {min-height:100%;clear:both}
 #wrapper:after {display:block;visibility:hidden;clear:both;content:""}
 
-#container {width:100%;position: absolute; top: 109px;left: 250px;height:650px;}
+#container {width:100%;position: absolute; top: 109px;left: 250px;
+/* 			height:650px; */
+		   background:#1e1e2d
+		   }
 #container:after {display:block;visibility:hidden;clear:both;content:""}
 #container_title {font-size:1.6em;font-weight:bold;padding:10px;line-height:30px;color:#333;text-align:center}
 #container .conle {
@@ -216,7 +219,7 @@ box-shadow:0 2px 5px rgba(0,0,0,0.1)}
   overflow-x: hidden;
   margin-left: 0px;
   transition: margin-left 0.2s;
-  background:#1e1e2d;
+/*   background:#1e1e2d; */
   /* sticky bottom */
   box-sizing: border-box;
   margin-bottom: -160px;

@@ -246,3 +246,11 @@ display: block;
 font-size: .85em;
 padding: 10px;
 } */
+
+.lt_name_background{
+  width: 100%;
+  position: absolute;
+  height: 17%;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(22, 22, 34, 0) 0%, #1E1E2D 69.34%);
+}

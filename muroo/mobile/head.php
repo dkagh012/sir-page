@@ -124,28 +124,31 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
             ?>
 
                 <?php if($row['me_name']=="게시판") {?>
-                    <li class="gnb_1dli <?php echo $_GET["bo_table"]=="free" ? "active free":"free";?>">
-                
-                    <?php }else if($row['me_name']=="소식"){?>
-                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="notice" ? "active notice":"notice";?>">
-                
-                        <?php }else if($row['me_name']=="홈"){?>
-                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="" ? "active home":"home";?>"> 
-                
-                        <?php }else if($row['me_name']=="애니잇"){?>
-                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="ani" ? "active home":"home";?>"> 
-                
-                        <?php }else if($row['me_name']=="게임" ){?>
-                        <li class="gnb_1dli <?php echo $_GET["bo_table"]=="ani" and $sca == '게임' ? "active home":"home";?>"> 
-
-                
-                        <!-- ==> 홈위치 확인필요 -->
-                
-                        <?php }?>
-                
-                        <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" class="gnb_1da"><?php echo $row['me_name'] ?></a>
-                        <a class=""></a>
+                <li class="gnb_1dli <?php echo $_GET["bo_table"]=="free" ? "active free":"free";?>">
+            
+                <?php }else if($row['me_name']=="소식"){?>
+                <li class="gnb_1dli <?php echo $_GET["bo_table"]=="notice" ? "active notice":"notice";?>">
+            
+                <?php }else if($row['me_name']=="홈"){?>
+                <li class="gnb_1dli <?php echo $_GET["bo_table"]=="" ? "active home":"home";?>"> 
+            
+                <?php }else if($row['me_name']=="애니"){?>
+                <li class="gnb_1dli <?php if( $_GET["bo_table"]=="ani" && $_GET["sca"] == "애니" ){ echo "active ani" ;} else { echo "ani"; }?>"> 
+            
+                <?php }else if($row['me_name']=="게임" ){?>
+                <li class="gnb_1dli <?php if( $_GET["bo_table"]=="ani" && $_GET["sca"] == "게임" ){ echo "active game" ;} else { echo "game"; }?>"> 
                     
+                <?php }else if($row['me_name']=="코스프레" ){?>
+                <li class="gnb_1dli <?php if( $_GET["bo_table"]=="ani" && $_GET["sca"] == "코스프레" ){ echo "active cosp" ;} else { echo "cosp"; }?>"> 
+
+                <?php } else {?>
+                <li class="gnb_1dli ">
+                <?php }?>
+
+
+                        <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" class="gnb_1da"><?php echo $row['me_name'] ?></a>
+                        <a class=""><?=$act_3;?></a>
+         </li>
                         
                 
                 <?php

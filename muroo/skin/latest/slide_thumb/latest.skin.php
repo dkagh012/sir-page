@@ -43,19 +43,22 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         ?>
 
         <div class="swiper-slide swiper-slide-slide">
+            <!-- 이미지 로드 부분 -->
             <a href="<?php echo $wr_href; ?>"><?php echo run_replace('thumb_image_tag', $img_content, $thumb); ?></a>
-            <?php if ($list[$i]['icon_new']) { ?>
-                <div class="slide_list_img_background"></div>
-            <?php } ?>
+                <!--백 그라운드 아래 부분  -->
+            <div class="slide_list_img_background"></div>
+
             
             <div class="slide_gap">
                 <ul>
                 <li class="slide_title cut">
+                    <!-- 카테고리 -->
                     <p>[<?php 
                         if($list[$i]['ca_name']) {
                             echo $list[$i]['ca_name'];
                         }
                     ?>]
+                    <!-- 이름 -->
                     <?php echo $list[$i]['subject'] ?>
                 </p>
                     <!-- <p href="<?php echo $wr_href; ?>"></p> -->
